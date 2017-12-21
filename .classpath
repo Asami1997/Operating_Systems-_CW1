@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="First_Come_First_Serve/src"/>
+	<classpathentry kind="src" path="Round_Robin/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="First_Come_First_Serve/bin"/>
+</classpath>

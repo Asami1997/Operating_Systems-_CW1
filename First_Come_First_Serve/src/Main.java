@@ -1,4 +1,5 @@
 /*
+ /*
  *This class contains the implementation of the first come first serve algorithm 
  *
  */
@@ -17,7 +18,7 @@ class Process{
 	int turnAround;
 	
 	int completionTime = 0;
-	
+
     Process(int sub,int bur){
     	
         arrivalTime = sub;
@@ -33,6 +34,7 @@ public class Main{
         
        static float averageTurnAroundTime;
        
+      static int cpuUsage;
        //an array that contain n processes
        
        static Process[] processes;
@@ -43,15 +45,15 @@ public class Main{
         int x=0;
        
         
+        //getting user input
 		Scanner s = new Scanner(System.in);
 		
+		//prompting user to enter the required details
 		System.out.println("Enter the number of processes:");
 		
 		int n = s.nextInt();
-		
-		
-		
-         processes = new Process[n];
+	
+        processes = new Process[n];
         
         //get the arrival and burst time of each process from user
         
@@ -97,6 +99,12 @@ public class Main{
         }
         
 		System.out.println("\n\n\nAverageTurnAroundTime :"+averageTurnAroundTime +"\n\n\nAverageWaitingTime :" + averageWaitingTime);
+		
+		//calculating CPU usage
+		
+		cpuUsage = processes[processes.length-1].completionTime - processes[0].arrivalTime; 
+		
+		System.out.println("\n\n\n CPU Usage : " + cpuUsage );
 
     }
     
@@ -112,6 +120,7 @@ public class Main{
     		
     	}
     	
+    	// calculating average TAT 
     	averageTurnAroundTime = totalTurnAroundTime/processes.length;
     	
     	
@@ -127,6 +136,7 @@ public class Main{
     		totalWaitingsTime += processes[i].wait;
     	}
     	
+    	//calculating average WT 
     	averageWaitingTime = totalWaitingsTime/processes.length;
     }
 }
