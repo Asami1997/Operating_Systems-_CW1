@@ -12,10 +12,13 @@ class RoundRobin {
 		//reading from user the number of processes
 		int n = Integer.parseInt(in.readLine());
 
+		//burst times
 		int bt[] = new int[n];
 
+		//waiting times
 		int wt[] = new int[n];
 
+		//turn around times
 		int tat[] = new int[n];
 
 		int a[] = new int[n];
@@ -41,7 +44,7 @@ class RoundRobin {
 
 			wt[i] = 0;
 
-		//calculating burst time and waiting time 
+		//calculating burst times and waiting times
 		do {
 			for (i = 0; i < n; i++) {
 				if (bt[i] > q) {

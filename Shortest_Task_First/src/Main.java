@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main{
+public class Main{
 
     public static void main(String args[]){
         int burst_time[],process[],waiting_time[],tat[],i,j,n,total=0,pos,temp;

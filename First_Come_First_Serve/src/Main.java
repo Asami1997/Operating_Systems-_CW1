@@ -34,7 +34,7 @@ public class Main{
         
        static float averageTurnAroundTime;
        
-      static int cpuUsage;
+       static int cpuUsage;
        //an array that contain n processes
        
        static Process[] processes;
@@ -64,7 +64,7 @@ public class Main{
 			int arrivalTime  = s.nextInt();
 			
 			int burstTime = s.nextInt();
-			
+	
 			processes[i] = new Process(arrivalTime,burstTime);
 			
 		}
@@ -79,15 +79,10 @@ public class Main{
 	
 			//calculating turn around time for the process and saving it in the assigned variable
 			processes[i].turnAround = processes[i].completionTime - processes[i].arrivalTime;
-			
-			//getting average turn around time
-			getAvgTurnAround();
-			
+	
+			//calculating waiting time 						
 			processes[i].wait = processes[i].turnAround - processes[i].bursts;
-			
-			//getting average waiting time
-			getAvgWaitingTime();
-			
+	
 			System.out.println("Process "+i+":");
 			
 			System.out.println("Arrival Time\tBurst Time\tTurnaround\tCompletion\twaiting\t");
@@ -98,6 +93,11 @@ public class Main{
 						
         }
         
+        //getting average turn around time
+			getAvgTurnAround();
+		//getting average waiting time
+			getAvgWaitingTime();
+				
 		System.out.println("\n\n\nAverageTurnAroundTime :"+averageTurnAroundTime +"\n\n\nAverageWaitingTime :" + averageWaitingTime);
 		
 		//calculating CPU usage
