@@ -66,7 +66,7 @@ public class Main{
         {
             tat[i]=burst_time[i]+waiting_time[i]; //Calculating Turnaround Time
             total+=tat[i];
-            System.out.println("\n p"+process[i]+"\t\t "+burst_time[i]+"\t\t "+waiting_time[i]+"\t\t "+tat[i]);
+            System.out.println("\n"+process[i]+"\t\t "+burst_time[i]+"\t\t\t "+waiting_time[i]+"\t\t\t "+tat[i]);
         }
 
         //Calculation of Average Turnaround Time
