@@ -1,6 +1,6 @@
 import java.io.*;
 
-class RoundRobin {
+public class RoundRobin {
 	public static void main(String args[]) throws IOException {
 		DataInputStream in = new DataInputStream(System.in);
 
